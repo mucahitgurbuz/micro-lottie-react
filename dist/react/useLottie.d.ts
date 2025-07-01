@@ -119,4 +119,3 @@ export declare function useHoverLottie(src: string, options?: Partial<UseLottieO
     containerRef: import("react").RefObject<HTMLDivElement>;
     isHovered: boolean;
 };
-//# sourceMappingURL=useLottie.d.ts.map

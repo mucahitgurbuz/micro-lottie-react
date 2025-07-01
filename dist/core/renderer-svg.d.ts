@@ -112,4 +112,3 @@ export declare class SVGRenderer {
      */
     getSVG(): SVGSVGElement;
 }
-//# sourceMappingURL=renderer-svg.d.ts.map

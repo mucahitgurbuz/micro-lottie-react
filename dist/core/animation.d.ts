@@ -173,4 +173,3 @@ export declare class Animation implements AnimationController {
      */
     getOutPoint(): number;
 }
-//# sourceMappingURL=animation.d.ts.map

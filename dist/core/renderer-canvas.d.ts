@@ -117,4 +117,3 @@ export declare class CanvasRenderer {
      */
     getCanvas(): HTMLCanvasElement;
 }
-//# sourceMappingURL=renderer-canvas.d.ts.map

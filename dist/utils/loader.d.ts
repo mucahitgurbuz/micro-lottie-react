@@ -91,4 +91,3 @@ export declare class LottieLoader {
      */
     private static roundNumbers;
 }
-//# sourceMappingURL=loader.d.ts.map

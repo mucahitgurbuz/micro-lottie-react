@@ -75,4 +75,3 @@ export declare class LottieParser {
      */
     private static roundNumbers;
 }
-//# sourceMappingURL=parser.d.ts.map

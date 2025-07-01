@@ -17,4 +17,3 @@ export interface LottiePlayerRef {
  * Supports both .json and .lottie formats with zero dependencies
  */
 export declare const LottiePlayer: React.ForwardRefExoticComponent<LottiePlayerProps & React.RefAttributes<LottiePlayerRef>>;
-//# sourceMappingURL=LottiePlayer.d.ts.map

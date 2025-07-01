@@ -281,4 +281,3 @@ export interface LoaderResult {
     size: number;
     loadTime: number;
 }
-//# sourceMappingURL=index.d.ts.map

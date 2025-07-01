@@ -10,67 +10,7 @@ const globals = {
 };
 
 export default [
-  // ES Modules build
-  {
-    input: "src/index.ts",
-    external,
-    output: {
-      file: "dist/index.esm.js",
-      format: "es",
-      sourcemap: true,
-    },
-    plugins: [
-      resolve(),
-      commonjs(),
-      typescript({
-        tsconfig: "./tsconfig.json",
-        declaration: true,
-        declarationMap: true,
-        outDir: "dist",
-      }),
-    ],
-  },
-
-  // CommonJS build
-  {
-    input: "src/index.ts",
-    external,
-    output: {
-      file: "dist/index.js",
-      format: "cjs",
-      sourcemap: true,
-      exports: "named",
-    },
-    plugins: [
-      resolve(),
-      commonjs(),
-      typescript({
-        tsconfig: "./tsconfig.json",
-      }),
-    ],
-  },
-
-  // UMD build for browsers
-  {
-    input: "src/index.ts",
-    external,
-    output: {
-      file: "dist/index.umd.js",
-      format: "umd",
-      name: "MicroLottieReact",
-      globals,
-      sourcemap: true,
-    },
-    plugins: [
-      resolve(),
-      commonjs(),
-      typescript({
-        tsconfig: "./tsconfig.json",
-      }),
-    ],
-  },
-
-  // Minified UMD build
+  // Production minified UMD build - the only one we ship
   {
     input: "src/index.ts",
     external,
@@ -79,19 +19,24 @@ export default [
       format: "umd",
       name: "MicroLottieReact",
       globals,
-      sourcemap: true,
+      sourcemap: false, // No source maps for production
     },
     plugins: [
       resolve(),
       commonjs(),
       typescript({
         tsconfig: "./tsconfig.json",
+        declaration: true,
+        declarationMap: false, // No declaration maps
+        outDir: "dist",
       }),
       terser({
         compress: {
           drop_console: true,
           drop_debugger: true,
-          pure_funcs: ["console.log", "console.warn"],
+          pure_funcs: ["console.log", "console.warn", "console.error"],
+          dead_code: true,
+          unused: true,
         },
         mangle: {
           properties: {

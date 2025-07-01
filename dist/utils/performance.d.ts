@@ -191,4 +191,3 @@ export declare class OptimizationUtils {
      */
     static isInPowerSaveMode(): boolean;
 }
-//# sourceMappingURL=performance.d.ts.map
