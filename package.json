@@ -49,7 +49,7 @@
     "docs:serve": "vitepress serve docs",
     "examples:dev": "cd examples && npm run dev",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run test && npm run lint && npm run build"
+    "prepublishOnly": "npm run test && npm run type-check && npm run build"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
