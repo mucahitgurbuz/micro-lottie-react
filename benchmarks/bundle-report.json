@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-07-01T10:42:50.877Z",
+  "totalSize": 496.90000000000003,
+  "totalGzipped": 174,
+  "targetMet": false,
+  "passRate": 0,
+  "files": {
+    "index.esm.js": {
+      "size": 146483,
+      "sizeKB": 143,
+      "gzippedKB": 50.1,
+      "target": 12,
+      "passed": false
+    },
+    "index.js": {
+      "size": 147466,
+      "sizeKB": 144,
+      "gzippedKB": 50.4,
+      "target": 10,
+      "passed": false
+    },
+    "index.umd.js": {
+      "size": 164479,
+      "sizeKB": 160.6,
+      "gzippedKB": 56.2,
+      "target": 15,
+      "passed": false
+    },
+    "index.umd.min.js": {
+      "size": 50480,
+      "sizeKB": 49.3,
+      "gzippedKB": 17.3,
+      "target": 15,
+      "passed": false
+    }
+  },
+  "recommendations": {
+    "targetMet": false,
+    "currentSize": 174,
+    "targetSize": 15,
+    "recommendations": [
+      "Remove unused features from core bundle",
+      "Split into separate packages",
+      "Use dynamic imports for optional features",
+      "Optimize renderer implementations"
+    ]
+  }
+}

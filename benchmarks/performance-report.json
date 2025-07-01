@@ -1,0 +1,192 @@
+{
+  "totalTests": 25,
+  "passedTests": 13,
+  "passRate": "52.0",
+  "breakdown": {
+    "parsing": [
+      {
+        "test": "parsing",
+        "case": "Simple Animation (Small JSON)",
+        "expected": 10,
+        "actual": 11,
+        "passed": false
+      },
+      {
+        "test": "parsing",
+        "case": "Medium Animation (Medium JSON)",
+        "expected": 25,
+        "actual": 20,
+        "passed": true
+      },
+      {
+        "test": "parsing",
+        "case": "Complex Animation (Large JSON)",
+        "expected": 80,
+        "actual": 77,
+        "passed": true
+      },
+      {
+        "test": "parsing",
+        "case": "Simple Animation (.lottie)",
+        "expected": 8,
+        "actual": 7,
+        "passed": true
+      },
+      {
+        "test": "parsing",
+        "case": "Medium Animation (.lottie)",
+        "expected": 15,
+        "actual": 16,
+        "passed": false
+      },
+      {
+        "test": "parsing",
+        "case": "Complex Animation (.lottie)",
+        "expected": 35,
+        "actual": 28,
+        "passed": true
+      }
+    ],
+    "rendering": [
+      {
+        "test": "rendering",
+        "case": "Canvas Rendering (Simple)",
+        "expected": 60,
+        "actual": 55,
+        "passed": true
+      },
+      {
+        "test": "rendering",
+        "case": "Canvas Rendering (Complex)",
+        "expected": 45,
+        "actual": 46,
+        "passed": true
+      },
+      {
+        "test": "rendering",
+        "case": "SVG Rendering (Simple)",
+        "expected": 55,
+        "actual": 50,
+        "passed": true
+      },
+      {
+        "test": "rendering",
+        "case": "SVG Rendering (Complex)",
+        "expected": 30,
+        "actual": 28,
+        "passed": true
+      }
+    ],
+    "memory": [
+      {
+        "test": "memory",
+        "case": "Single Simple Animation",
+        "expected": 2,
+        "actual": 2.0423538852074996,
+        "passed": false
+      },
+      {
+        "test": "memory",
+        "case": "Single Complex Animation",
+        "expected": 5,
+        "actual": 5.824799377366018,
+        "passed": false
+      },
+      {
+        "test": "memory",
+        "case": "Multiple Simple Animations (5x)",
+        "expected": 8,
+        "actual": 8.486909393858202,
+        "passed": false
+      },
+      {
+        "test": "memory",
+        "case": "Multiple Complex Animations (3x)",
+        "expected": 12,
+        "actual": 13.251210911257305,
+        "passed": false
+      },
+      {
+        "test": "memory",
+        "case": "Stress Test (10x Simple)",
+        "expected": 15,
+        "actual": 16.171499372551033,
+        "passed": false
+      }
+    ],
+    "loading": [
+      {
+        "test": "loading",
+        "case": "Local JSON (Fast Network)",
+        "expected": 50,
+        "actual": 48,
+        "passed": true
+      },
+      {
+        "test": "loading",
+        "case": "Local .lottie (Fast Network)",
+        "expected": 30,
+        "actual": 23,
+        "passed": true
+      },
+      {
+        "test": "loading",
+        "case": "Remote JSON (Slow 3G)",
+        "expected": 800,
+        "actual": 850,
+        "passed": false
+      },
+      {
+        "test": "loading",
+        "case": "Remote .lottie (Slow 3G)",
+        "expected": 400,
+        "actual": 287,
+        "passed": true
+      },
+      {
+        "test": "loading",
+        "case": "Cached Animation",
+        "expected": 5,
+        "actual": 4,
+        "passed": true
+      }
+    ],
+    "device": [
+      {
+        "test": "device",
+        "case": "High-End Desktop",
+        "expected": 60,
+        "actual": 67,
+        "passed": true
+      },
+      {
+        "test": "device",
+        "case": "Mid-Range Laptop",
+        "expected": 45,
+        "actual": 44,
+        "passed": false
+      },
+      {
+        "test": "device",
+        "case": "High-End Mobile",
+        "expected": 55,
+        "actual": 50,
+        "passed": false
+      },
+      {
+        "test": "device",
+        "case": "Budget Mobile",
+        "expected": 30,
+        "actual": 19,
+        "passed": false
+      },
+      {
+        "test": "device",
+        "case": "Tablet",
+        "expected": 50,
+        "actual": 46,
+        "passed": false
+      }
+    ]
+  }
+}
