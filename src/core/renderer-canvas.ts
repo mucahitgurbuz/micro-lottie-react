@@ -397,20 +397,21 @@ export class CanvasRenderer {
   /**
    * Render solid layer
    */
-  private renderSolidLayer(_layer: Layer, _frame: number): void {
-    // Solid layers would have color and dimensions
-    // This is a simplified implementation
-    this.ctx.fillStyle = "#000000"; // Default black
-    this.ctx.fillRect(0, 0, _layer.w || 100, _layer.h || 100);
-  }
+  private renderSolidLayer(layer: Layer, _frame: number): void {
+    // Use layer's solid color if available
+    const solidColor = layer.sc || "#ff0000"; // Default to red for testing
+    const width = layer.sw || layer.w || 100;
+    const height = layer.sh || layer.h || 100;
 
+    this.ctx.fillStyle = solidColor;
+    this.ctx.fillRect(0, 0, width, height);
+  }
   /**
    * Render image layer
    */
   private renderImageLayer(_layer: Layer, _frame: number): void {
     // Image rendering would require loading external assets
     // This is a placeholder for image layer implementation
-    console.warn("Image layer rendering not implemented");
   }
 
   /**
@@ -419,7 +420,6 @@ export class CanvasRenderer {
   private renderTextLayer(_layer: Layer, _frame: number): void {
     // Text rendering would require complex text layout
     // This is a placeholder for text layer implementation
-    console.warn("Text layer rendering not implemented");
   }
 
   /**

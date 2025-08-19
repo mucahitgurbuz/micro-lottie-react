@@ -38,6 +38,10 @@ export interface Layer {
   w?: number; // width (for precomp)
   h?: number; // height (for precomp)
   refId?: string; // reference id
+  // Solid layer properties
+  sc?: string; // solid color
+  sw?: number; // solid width
+  sh?: number; // solid height
 }
 
 export interface Transform {
@@ -162,7 +166,7 @@ import { CSSProperties, RefObject } from "react";
 
 // React component prop interfaces
 export interface LottiePlayerProps {
-  src: string;
+  src: string | LottieData | ArrayBuffer;
   autoplay?: boolean;
   loop?: boolean;
   renderer?: "canvas" | "svg";
@@ -190,7 +194,7 @@ export interface RendererSettings {
 
 export interface UseLottieOptions {
   container: RefObject<HTMLElement>;
-  src: string;
+  src: string | LottieData | ArrayBuffer;
   renderer?: "canvas" | "svg";
   autoplay?: boolean;
   loop?: boolean;

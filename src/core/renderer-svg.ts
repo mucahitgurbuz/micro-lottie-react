@@ -116,10 +116,10 @@ export class SVGRenderer {
         this.updateSolidLayer(layer, layerGroup, frame);
         break;
       case 2: // Image layer
-        this.updateImageLayer(layer, layerGroup, frame);
+        this.renderImageLayer(layer, layerGroup, frame);
         break;
       case 5: // Text layer
-        this.updateTextLayer(layer, layerGroup, frame);
+        this.renderTextLayer(layer, layerGroup, frame);
         break;
     }
   }
@@ -468,7 +468,7 @@ export class SVGRenderer {
     );
     if (comp && comp.layers) {
       // This would require recursive rendering of the composition
-      console.warn("Precomp layer rendering not fully implemented");
+      // Precomp layer rendering is not fully implemented yet
     }
   }
 
@@ -495,23 +495,25 @@ export class SVGRenderer {
   /**
    * Update image layer
    */
-  private updateImageLayer(
+  private renderImageLayer(
     _layer: Layer,
     _layerGroup: SVGGElement,
     _frame: number
   ): void {
-    console.warn("Image layer rendering not implemented");
+    // Image rendering would require loading external assets
+    // This is a placeholder for image layer implementation
   }
 
   /**
    * Update text layer
    */
-  private updateTextLayer(
+  private renderTextLayer(
     _layer: Layer,
     _layerGroup: SVGGElement,
     _frame: number
   ): void {
-    console.warn("Text layer rendering not implemented");
+    // Text rendering would require complex text layout
+    // This is a placeholder for text layer implementation
   }
 
   /**

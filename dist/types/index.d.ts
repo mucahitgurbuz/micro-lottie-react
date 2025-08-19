@@ -37,6 +37,9 @@ export interface Layer {
     w?: number;
     h?: number;
     refId?: string;
+    sc?: string;
+    sw?: number;
+    sh?: number;
 }
 export interface Transform {
     a?: AnimatableValue;
@@ -146,7 +149,7 @@ export interface Mask {
 }
 import { CSSProperties, RefObject } from "react";
 export interface LottiePlayerProps {
-    src: string;
+    src: string | LottieData | ArrayBuffer;
     autoplay?: boolean;
     loop?: boolean;
     renderer?: "canvas" | "svg";
@@ -172,7 +175,7 @@ export interface RendererSettings {
 }
 export interface UseLottieOptions {
     container: RefObject<HTMLElement>;
-    src: string;
+    src: string | LottieData | ArrayBuffer;
     renderer?: "canvas" | "svg";
     autoplay?: boolean;
     loop?: boolean;

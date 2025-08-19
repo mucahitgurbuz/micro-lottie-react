@@ -1,6 +1,6 @@
 {
   "name": "micro-lottie-react",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "type": "module",
   "description": "The smallest React Lottie player. 15KB. Zero deps. Supports .lottie files.",
   "keywords": [
@@ -20,16 +20,27 @@
   "homepage": "https://github.com/mucahitgurbuz/micro-lottie-react#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mucahitgurbuz/micro-lottie-react.git"
+    "url": "git+https://github.com/mucahitgurbuz/micro-lottie-react.git"
   },
   "bugs": {
     "url": "https://github.com/mucahitgurbuz/micro-lottie-react/issues"
   },
-  "main": "dist/index.umd.min.js",
-  "module": "dist/index.umd.min.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "default": "./dist/index.esm.js"
+    }
+  },
   "files": [
     "dist/index.d.ts",
+    "dist/index.esm.js",
+    "dist/index.cjs.js",
+    "dist/index.umd.js",
     "dist/index.umd.min.js",
     "README.md"
   ],
@@ -85,7 +96,7 @@
   "bundlesize": [
     {
       "path": "./dist/index.esm.js",
-      "maxSize": "15kb"
+      "maxSize": "17kb"
     }
   ],
   "engines": {

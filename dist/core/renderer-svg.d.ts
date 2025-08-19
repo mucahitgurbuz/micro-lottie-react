@@ -86,11 +86,11 @@ export declare class SVGRenderer {
     /**
      * Update image layer
      */
-    private updateImageLayer;
+    private renderImageLayer;
     /**
      * Update text layer
      */
-    private updateTextLayer;
+    private renderTextLayer;
     /**
      * Get animated value at specific frame
      */

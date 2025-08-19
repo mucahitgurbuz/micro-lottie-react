@@ -7,6 +7,7 @@ export type {
   LottiePlayerProps,
   UseLottieOptions,
   UseLottieReturn,
+  LottieData,
 } from "./types";
 
 // Default export for convenience
